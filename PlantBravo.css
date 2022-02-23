@@ -1,0 +1,86 @@
+.navbar{
+  background-color: white;
+}
+
+body
+{
+    background-color: #EFCB8C;
+}
+
+#viverus{
+    width: 1600px;
+    height: 900px;
+    
+}
+
+.bannerviverus{
+  position: center;
+  width: max-content;
+  margin-inline-start: 100px;
+}
+
+h4{
+  text-align: center;
+  color: beige;
+}
+
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: #2f2f2f;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .footer > * {
+    flex:  1 100%;
+  }
+  
+  .footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .footer__logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+  }
+  
+  .footer__addr{
+    margin-top: 1.3em;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .footer__nav > * {
+    flex: 1;
+  }
+    
+  .footer__addr {
+    flex: 2 0px;
+  }
+  
+  .footer__nav {
+    flex: 1 0px;
+  }
+
+
+  section{
+    margin-inline-start: 20px;
+    
+    
+  }
+
+  .contenedor1{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    justify-content: space-evenly;
+  }
+
+  .card-carrito {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
