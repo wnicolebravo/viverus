@@ -4,27 +4,27 @@ alert(" ¿Cuantas plantitas llevaras hoy? \n -Monstera deliciosa \n -Monstera Ad
 
 //Planteamos el constructor para luego darles nombre,precio y que tipo de producto es//
 
-function Producto ( nombre , precio, tipo) {
+function AgregarProducto ( nombre , precio, tipo) {
     this.nombre = nombre;
     this.precio = precio;
     this.tipo = tipo;
 }
 
-const planta1 = new Producto ("Monstera Deliciosa", 4500, "interior");
-const planta2 = new Producto ("Monstera Adansonii", 1800, "interior");
-const planta3 = new Producto ("Sanseviera", 800, "interior");
-const planta4 = new Producto ("Pilea", 2000, "interior");
-const planta5 = new Producto ("Euphorbia", 2500, "interior");
-const planta6 = new Producto("Potus lemon", 890, "interior");
-const planta7 = new Producto ("Potus variegata", 1000, "interior");
-const planta8 = new Producto ("Peperomia Watermelon", 1750, "interior");
-const planta9 = new Producto ("Zamioculca", 5000, "interior");
-const planta10 = new Producto ("Jazmin de Leche", 1900, "exterior");
-const plantas11 = new Producto ("Ojo de poeta", 3000, "exterior");
-const plantas12 = new Producto ("Ravenala", 3600, "exterior");
-const plantas13 = new Producto ("Ficus Arbusto", 5500, "exterior");
-const plantas14 = new Producto ("Begonia de Angel", 1800, "exterior");
-const plantas15 = new Producto ("Hiedra", 800, "exterior");
+const planta1 = new AgregarProducto ("Monstera Deliciosa", 4500, "interior");
+const planta2 = new AgregarProducto ("Monstera Adansonii", 1800, "interior");
+const planta3 = new AgregarProducto ("Sanseviera", 800, "interior");
+const planta4 = new AgregarProducto ("Pilea", 2000, "interior");
+const planta5 = new AgregarProducto ("Euphorbia", 2500, "interior");
+const planta6 = new AgregarProducto("Potus lemon", 890, "interior");
+const planta7 = new AgregarProducto ("Potus variegata", 1000, "interior");
+const planta8 = new AgregarProducto ("Peperomia Watermelon", 1750, "interior");
+const planta9 = new AgregarProducto ("Zamioculca", 5000, "interior");
+const planta10 = new AgregarProducto ("Jazmin de Leche", 1900, "exterior");
+const plantas11 = new AgregarProducto ("Ojo de poeta", 3000, "exterior");
+const plantas12 = new AgregarProducto ("Ravenala", 3600, "exterior");
+const plantas13 = new AgregarProducto ("Ficus Arbusto", 5500, "exterior");
+const plantas14 = new AgregarProducto ("Begonia de Angel", 1800, "exterior");
+const plantas15 = new AgregarProducto ("Hiedra", 800, "exterior");
 
 
 
@@ -66,11 +66,10 @@ for ( x in ProductoCatalogo) {
 
     if ( !isNaN(q) && q>0) {
         productosCarrito[x].quantify = q
-        subtotal += multi ( q, productosCarrito[x].precio) 
-        total+=` ${multi} = ${subtotal} \n`
-        alert = `Tu compra es de ${total}. \n Gracias por tu compra!`
+        subtotal = multi ( q, productosCarrito[x].precio) 
+        total+= multi ( q, productosCarrito[x].precio)
         
-    
+        
     }else {
         alert ("Ingresaste un dato erroneo, por favor ingresa y realiza de nuevo la compra");
         contador++
@@ -80,8 +79,8 @@ for ( x in ProductoCatalogo) {
             alert ("Okey comencemos de nuevo")
             location.reload ()
         }
-
-
-    
     }
-}
+}    
+alert (`Tu compra final es de $${total} \n Gracias por tu compra y recuerda enviarnos el comprobante a nuestro whatsapp!`)
+
+
