@@ -84,3 +84,8 @@ for ( x in ProductoCatalogo) {
 alert (`Tu compra final es de $${total} \n Gracias por tu compra y recuerda enviarnos el comprobante a nuestro whatsapp!`)
 
 
+const boton= document.getElementById("botoncompra")(
+    console.log (document.getElementById("botoncompra").innerHTML = `Abonar ${total}`)
+)
+
+
