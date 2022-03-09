@@ -10,113 +10,122 @@
 
     </head>
     <body>
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-        
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="JSBravo.html">Inicio</a>
-          </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-             
-              <li><a href="CATALOGO.html">Nuestros productos</a></li>
-            </ul>
-            <form class="navbar-form navbar-left">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Buscar">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+            
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Inicio</a>
               </div>
-              <button type="submit" class="btn btn-default">Enviar</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right" class="submenu">
-              <li><a href="Eshop.html"class="button"> <img src="bagshop.jpg" width="30px" heigth="40px"alt=""></a>
-                
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">                
+                  <li><a href="CATALOGO.html">Nuestros productos</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> ¿Que estas buscando? <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="CATALOGO.html">Plantas exterior</a></li>
+                      <li><a href="CATALOGO.html">Plantas interior</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="CATALOGO.html">Macetas</a></li>
+                      <li><a href="CATALOGO.html">Herramientas</a></li>
+                      <li><a href="CATALOGO.html">Accesorios</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Buscar">
+                  </div>
+                  <button type="submit" class="btn btn-default">Enviar</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a type ="button" id="botoncompra" href="Eshop.html">Carrito online </a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sobre nosotros <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Nuestras redes sociales</a></li>
+                      <li><a href="#">Sucursales</a></li>
+                      <li><a href="#">Retiros/Envios</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+
+        <header class="imagenprincipal">
+         <img src="viverus.png" class="img-responsive" alt="Responsive image" id="viverus">
+        </header>
+        
+        
+
+        
+        <footer class="footer">
+
+            <div class="footer__addr">
+              <h3 class="footer_logo">Visitanos,te estamos esperando!</h3>
+              <address>
+                Primera Junta, CABA, Buenos Aires.<br>
+                <img src="ubicacion.png" alt="">
+                    <br>
+              </address>
+            </div>
+            
+            <ul class="footer__nav">
+                <li class="nav__item">
+                <h2 class="nav__title">Redes sociales</h2>
+          
+                <ul class="nav__ul">
+                  <li>
+                    <a href="#">Instagram</a>
+                  </li>
+          
+                  <li>
+                    <a href="#">Facebook</a>
+                  </li>
+                      
+                  <li>
+                    <a href="#">Alternative Ads</a>
+                  </li>
+                </ul>
               </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Sobre nosotros <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Nuestras redes sociales</a></li>
-                  <li><a href="#">Sucursales</a></li>
-                  <li><a href="#">Retiros/Envios</a></li>
+        
+              
+              <li class="nav__item">
+                <h2 class="nav__title">Legales</h2>
+                
+                <ul class="nav__ul">
+                  <li>
+                    <a href="#">Politicas de privacidad</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Terminos y Condiciones</a>
+                  </li>
+    
                 </ul>
               </li>
             </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-        
-         <header class="imagenprincipal">
-         <img src="viverus.png" class="img-responsive" alt="Responsive image" id="viverus">
-        </header>
-
-  
-
-        
-      <footer class="footer">
-
-        <div class="footer__addr">
-          <h3 class="footer_logo">Visitanos,te estamos esperando!</h3>
-          <address>
-            Primera Junta, CABA, Buenos Aires.<br>
-            <img src="ubicacion.png" alt="">
-                <br>
-          </address>
-        </div>
-        
-        <ul class="footer__nav">
-            <li class="nav__item">
-            <h2 class="nav__title">Redes sociales</h2>
-      
-            <ul class="nav__ul">
-              <li>
-                <a href="#">Instagram</a>
-              </li>
-      
-              <li>
-                <a href="#">Facebook</a>
-              </li>
-                  
-              <li>
-                <a href="#">Alternative Ads</a>
-              </li>
-            </ul>
-          </li>
-    
-          
-          <li class="nav__item">
-            <h2 class="nav__title">Legales</h2>
             
-            <ul class="nav__ul">
-              <li>
-                <a href="#">Politicas de privacidad</a>
-              </li>
+            <div class="legal">
+              <p>&copy; 2022 Viverus. Todos los derechos reservados.</p>
               
-              <li>
-                <a href="#">Terminos y Condiciones</a>
-              </li>
-
-            </ul>
-          </li>
-        </ul>
-        
-        <div class="legal">
-          <p>&copy; 2022 Viverus. Todos los derechos reservados.</p>
-          
-          <div class="legal__links">
-            <span>Hecho con amor <span class="heart">♥</span></span>
-          </div>
-        </div>
-      </footer>
+              <div class="legal__links">
+                <span>Hecho con amor <span class="heart">♥</span></span>
+              </div>
+            </div>
+          </footer>
 
 
-     
+
+
     </body>
 </html>
-
