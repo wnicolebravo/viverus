@@ -64,7 +64,7 @@ function multi (a, b){
 for ( x in ProductoCatalogo) {
     let q= prompt (` ${ProductoCatalogo[x].nombre} esta ${ProductoCatalogo[x].precio} pesos. Que cantidad te gustaria llevar?`);
 
-    if ( !isNaN(q) && q>0) {
+    if ( !isNaN(q) && q>=0) {
         productosCarrito[x].quantify = q
         subtotal = multi ( q, productosCarrito[x].precio) 
         total+= multi ( q, productosCarrito[x].precio)
@@ -84,8 +84,8 @@ for ( x in ProductoCatalogo) {
 alert (`Tu compra final es de $${total} \n Gracias por tu compra y recuerda enviarnos el comprobante a nuestro whatsapp!`)
 
 
-const boton= document.getElementById("botoncompra")(
+const boton= document.getElementById("botoncompra")
     console.log (document.getElementById("botoncompra").innerHTML = `Abonar ${total}`)
-)
+
 
 
