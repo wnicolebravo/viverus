@@ -84,8 +84,21 @@ for ( x in ProductoCatalogo) {
 alert (`Tu compra final es de $${total} \n Gracias por tu compra y recuerda enviarnos el comprobante a nuestro whatsapp!`)
 
 
+
 const boton= document.getElementById("botoncompra")
-    console.log (document.getElementById("botoncompra").innerHTML = `Abonar ${total}`)
+    boton.innerHTML = `Abonar ${total}`
+
+
+const buttonadd = document.querySelectorAll(`.addbutton`)
+buttonadd.forEach (AddProducto => {
+    AddProducto.addEventListener (`click`,Productoclicleado);
+})
+
+function Productoclicleado (event){
+    const buttona = event.target ;
+    console.log ( `Productoclicleado => buttona` , buttona)
+    
+}
 
 
 
