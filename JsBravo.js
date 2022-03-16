@@ -85,20 +85,20 @@ alert (`Tu compra final es de $${total} \n Gracias por tu compra y recuerda envi
 
 
 
+
 const boton= document.getElementById("botoncompra")
-    boton.innerHTML = `Abonar ${total}`
+    boton.innerHTML = `Abonar ${total}`;
 
 
-const buttonadd = document.querySelectorAll(`.addbutton`)
-buttonadd.forEach (AddProducto => {
-    AddProducto.addEventListener (`click`,Productoclicleado);
+const  buttona = document.querySelectorAll ("#buttonadd")
+
+buttona.addEvenListener("click", function ProductoAgregado(){
+    console.log (`Agregado`)
 })
 
-function Productoclicleado (event){
-    const buttona = event.target ;
-    console.log ( `Productoclicleado => buttona` , buttona)
-    
-}
+
+function onclickDecirProductoAdd(){
+    console.log ("Listo!Agregado a tu carrito!")
 
 
 
