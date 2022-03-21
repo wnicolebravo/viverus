@@ -1,50 +1,30 @@
-alert("¡Que bueno que nos hayas elegido!")
-
-alert(" ¿Cuantas plantitas llevaras hoy? \n -Monstera deliciosa \n -Monstera Adansonii \n -Sanseviera \n -Pilea \n -Potus Lemon \n -Potus variegata \n -Zamioculca \n -Peperomia Watermelon \n -Euphorbia Trigona \n -Jazmin de leche \n -Ojo de poeta \n -Ravenala \n -Begonia de Angel \n -Hiedra \n -Ficus arbusto ")
-
-//Planteamos el constructor para luego darles nombre,precio y que tipo de producto es//
-
-function AgregarProducto ( nombre , precio, tipo) {
+class Productos{
+    constructor( nombre , precio, tipo) {
     this.nombre = nombre;
     this.precio = precio;
     this.tipo = tipo;
+    }
+    
 }
 
-const planta1 = new AgregarProducto ("Monstera Deliciosa", 4500, "interior");
-const planta2 = new AgregarProducto ("Monstera Adansonii", 1800, "interior");
-const planta3 = new AgregarProducto ("Sanseviera", 800, "interior");
-const planta4 = new AgregarProducto ("Pilea", 2000, "interior");
-const planta5 = new AgregarProducto ("Euphorbia", 2500, "interior");
-const planta6 = new AgregarProducto("Potus lemon", 890, "interior");
-const planta7 = new AgregarProducto ("Potus variegata", 1000, "interior");
-const planta8 = new AgregarProducto ("Peperomia Watermelon", 1750, "interior");
-const planta9 = new AgregarProducto ("Zamioculca", 5000, "interior");
-const planta10 = new AgregarProducto ("Jazmin de Leche", 1900, "exterior");
-const plantas11 = new AgregarProducto ("Ojo de poeta", 3000, "exterior");
-const plantas12 = new AgregarProducto ("Ravenala", 3600, "exterior");
-const plantas13 = new AgregarProducto ("Ficus Arbusto", 5500, "exterior");
-const plantas14 = new AgregarProducto ("Begonia de Angel", 1800, "exterior");
-const plantas15 = new AgregarProducto ("Hiedra", 800, "exterior");
-
-
-
+// Introducimos dentro del catalogo los productos del constructor 
 
 const ProductoCatalogo = []
-ProductoCatalogo.push (planta1)
-ProductoCatalogo.push (planta2)
-ProductoCatalogo.push (planta3)
-ProductoCatalogo.push (planta4)
-ProductoCatalogo.push (planta5)
-ProductoCatalogo.push (planta6)
-ProductoCatalogo.push (planta7)
-ProductoCatalogo.push (planta8)
-ProductoCatalogo.push (planta9)
-ProductoCatalogo.push (planta10)
-ProductoCatalogo.push (plantas11)
-ProductoCatalogo.push (plantas12)
-ProductoCatalogo.push (plantas13)
-ProductoCatalogo.push (plantas14)
-ProductoCatalogo.push (plantas15)
+ProductoCatalogo.push (new Productos ("Monstera Deliciosa", 4500, "interior"))
+ProductoCatalogo.push (new Productos ("Monstera Adansonii", 1800, "interior"))
+ProductoCatalogo.push (new Productos ("Sanseviera", 800, "interior"))
+ProductoCatalogo.push (new Productos ("Pilea", 2000, "interior"))
+ProductoCatalogo.push (new Productos ("Euphorbia", 2500, "interior"))
+ProductoCatalogo.push (new Productos ("Potus lemon", 890, "interior"))
+ProductoCatalogo.push (new Productos ("Potus variegata", 1000, "interior"))
+ProductoCatalogo.push (new Productos ("Peperomia Watermelon", 1750, "interior"))
+ProductoCatalogo.push (new Productos ("Zamioculca", 5000, "interior"))
+ProductoCatalogo.push (new Productos ("Jazmin de Leche", 1900, "exterior"))
+ProductoCatalogo.push (new Productos ("Ojo de poeta", 3000, "exterior"))
+ProductoCatalogo.push (new Productos ("Ravenala", 3600, "exterior"))
+ProductoCatalogo.push (new Productos ("Ficus Arbusto", 5500, "exterior"))
+ProductoCatalogo.push (new Productos ("Begonia de Angel", 1800, "exterior"))
+ProductoCatalogo.push (new Productos ("Hiedra", 800, "exterior"))
 
 console.log (ProductoCatalogo)
 
@@ -56,12 +36,14 @@ let subtotal = 0
 let total = 0
 let cadena = ''
 
+//Creamos la funcion para que al seleccionar la cantidad de productos,nos de una multiplicacion de ellos
 
 function multi (a, b){
     return a*b
 }
 
-for ( x in ProductoCatalogo) {
+function comprarPlanta(id){
+    x=id
     let q= prompt (` ${ProductoCatalogo[x].nombre} esta ${ProductoCatalogo[x].precio} pesos. Que cantidad te gustaria llevar?`);
 
     if ( !isNaN(q) && q>=0) {
@@ -70,7 +52,7 @@ for ( x in ProductoCatalogo) {
         total+= multi ( q, productosCarrito[x].precio)
         
         
-    }else {
+    }else { 
         alert ("Ingresaste un dato erroneo, por favor ingresa y realiza de nuevo la compra");
         contador++
 
@@ -80,25 +62,26 @@ for ( x in ProductoCatalogo) {
             location.reload ()
         }
     }
-}    
+
 alert (`Tu compra final es de $${total} \n Gracias por tu compra y recuerda enviarnos el comprobante a nuestro whatsapp!`)
 
-
+}
 
 
 const boton= document.getElementById("botoncompra")
     boton.innerHTML = `Abonar ${total}`;
-
-
-const  buttona = document.querySelectorAll ("#buttonadd")
-
-buttona.addEvenListener("click", function ProductoAgregado(){
-    console.log (`Agregado`)
-})
-
-
-function onclickDecirProductoAdd(){
-    console.log ("Listo!Agregado a tu carrito!")
-
-
+    
+    
+   
+function onclickDecirProductoAdd(elemento){
+    let indiceElemento=elemento.dataset.id
+    let productoSeleccionado=ProductoCatalogo[indiceElemento]
+    
+    //alert(productoSeleccionado.toString())
+   // alert(JSON.stringify(productoSeleccionado))
+    
+    productoSeleccionado.precio
+    
+    console.log (productoSeleccionado)
+}
 
