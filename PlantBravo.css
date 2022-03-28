@@ -1,5 +1,53 @@
 .navbar{
   background-color: white;
+
+}
+
+.submenu {
+  position: relative;
+}
+
+.submenu #carrito{
+  display: none;
+}
+.submenu:hover #carrito{
+  display: block;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background: #DAF7A6;
+  padding: 20px;
+}
+.vacio {
+  padding: 10px;
+  background-color: #fbaf32;
+  text-align: center;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+}
+.button {
+  
+  padding: 10px;
+  background-color: #F7F4EE;
+  color: #21201F;
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+#bagshop {
+  position: relative;
+  padding: 10px;
+  float: right;
+  text-decoration: none;
+  height: 60px;
+} 
+
+th {
+  color: #21201F;
+
 }
 
 body
@@ -11,6 +59,13 @@ body
     width: 1600px;
     height: 900px;
     
+}
+
+#lista-platillos .row {
+  margin-bottom: 20px;
+}
+.agregar-carrito{
+  margin: 10px 0;
 }
 
 .bannerviverus{
@@ -95,3 +150,5 @@ h4{
     margin-left: 25px;
     margin-right: 25px;
   }
+
+  
