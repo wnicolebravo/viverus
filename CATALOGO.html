@@ -35,33 +35,45 @@
               </div>
               <button type="submit" class="btn btn-default">Buscar</button>
             </form>
-            <ul class="nav navbar-nav navbar-right" class="submenu">
-              <li><a type ="button" id="botoncompra" href="Eshop.html">Carrito online </a>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Sobre nosotros <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Nuestras redes sociales</a></li>
-                  <li><a href="#">Sucursales</a></li>
-                  <li><a href="#">Retiros/Envios</a></li>
-                </ul>
-              </li>
-            </ul>
+            <div class="two columns u-pull-right">
+              <ul>
+                  <li class="submenu">
+                      <img src="bagshop.jpg" id="bagshop" alt="">
+                      <div id="carrito">
+                          <p class="vacio">Carrito vacio</p>
+                          <table id="lista-carrito" class="u-full-width">
+                              <thead>
+                                  <tr>
+                                      <th>Imagen</th>
+                                      <th>Producto</th>
+                                      <th>Precio</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  
+                              </tbody>
+                          </table>
+                          <a href="#" id="vaciar-carrito"
+                          class="button u-full-width">Vaciar carrito</a>
+                      </div>
+                  </li>
+              </ul>
+          </div>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
       <section>
         <h1><strong>Plantas Interior</strong></h1>
         <hr>
-        <div class="contenedor1">
+        <div class="contenedor1" id="listaproductos">
           <div class="card-carrito">
             <div class="thumbnail">
               <img src="Plantas interior/monstera-deliciosa.jpg" alt="..."id="plantimage">
               <div class="caption">
                 <h3>Monstera Deliciosa</h3>
                 <p>Planta de gran estetica/ Interior/ Necesita humedad</p>
-                <h5>PRECIO: $4500</h5>
-                <button id="buttonadd" onclick="onclickDecirProductoAdd(this)" data-id ="0"> Agregar al carrito</button>
+                <h5 class="precio">PRECIO: $4500</h5>
+                <button class="u-full-width button-primary button input agregar-carrito"  data-id ="0"> Agregar al carrito</button>
               
               </div>
             </div>
@@ -71,9 +83,9 @@
               <img src="Plantas interior/monsteraadansonni.jpg" alt="..."id="plantimage">
               <div class="caption">
                 <h3>Monstera Adansonii</h3>
-                <h5>PRECIO: $1800</h5>
+                <h5 class="precio">PRECIO: $1800</h5>
                 <p>Interior/ Exotica/ Amiga de la sombra </p>
-                <button id="buttonadd" onclick="onclickDecirProductoAdd(this)" data-id ="1" > Agregar al carrito</button>
+                <button class="u-full-width button-primary button input agregar-carrito"  data-id ="1" > Agregar al carrito</button>
 
               
               </div>
@@ -84,23 +96,23 @@
               <img src="Plantas interior/pilea.jpg" alt="..."id="plantimage">
               <div class="caption">
                 <h3>Pilea</h3>
-                <h5>PRECIO: $2000</h5>
+                <h5 class="precio">PRECIO: $2000</h5>
                 <p>Interior/ Planta del dinero en la cultura asiatica/ Amante de la luz, NO sol directo</p>
-                <button id="buttonadd" onclick="onclickDecirProductoAdd(this)" data-id ="2"> Agregar al carrito</button>
+                <button class="u-full-width button-primary button input agregar-carrito"  data-id ="2"> Agregar al carrito</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-       <div class="contenedor1">
+       <div class="contenedor1" id="listaproductos">
         <div class="card-carrito">
           <div class="thumbnail">
             <img src="Plantas interior/sanseviera.jpg" alt="..."id="plantimage">
             <div class="caption">
               <h3>Sanseviera</h3>
-              <h5>PRECIO: $850</h5>
+              <h5 class="precio">PRECIO: $850</h5>
               <p>Planta interior/ Amante de la luz,no sol directo/ Le gustan los ambientes humedos</p>
-              <button id="buttonadd" onclick="onclickDecirProductoAdd(this)" data-id ="3"> Agregar al carrito</button>
+              <button class="u-full-width button-primary button input agregar-carrito"  data-id ="3"> Agregar al carrito</button>
             
             </div>
           </div>
@@ -110,9 +122,9 @@
             <img src="Plantas interior/euphorbia.jpg" alt="..."id="plantimage">
             <div class="caption">
               <h3>Euphorbia trigona</h3>
-              <h5>PRECIO: $2500</h5>
+              <h5 class="precio">PRECIO: $2500</h5>
               <p>Interior/ Exotica/Amiga de la sombra </p>
-              <button id="buttonadd" onclick="onclickDecirProductoAdd(this)"data-id ="4"> Agregar al carrito</button>
+              <button class="u-full-width button-primary button input agregar-carrito" data-id ="4"> Agregar al carrito</button>
             
             </div>
           </div>
@@ -122,24 +134,24 @@
             <img src="Plantas interior/potusvariegata.jpg" alt="..."id="plantimage">
             <div class="caption">
               <h3>Potus Variegata</h3>
-              <h5>PRECIO: $1000</h5>
+              <h5 class="precio">PRECIO: $1000</h5>
               <p>Interior/ Planta del dinero en la cultura asiatica/ Amante de la luz, NO sol directo</p>
-              <button id="buttonadd" onclick="onclickDecirProductoAdd(this)"data-id = "5"> Agregar al carrito</button>
+              <button class="u-full-width button-primary button input agregar-carrito" data-id = "5"> Agregar al carrito</button>
             
             </div>
           </div>
         </div>
        </div>
        </div>
-       <div class="contenedor1">
+       <div class="contenedor1" id="listaproductos">
        <div class="card-carrito">
         <div class="thumbnail">
           <img src="Plantas interior/peperomiasandia.jpg" alt="..."id="plantimage">
           <div class="caption">
             <h3>Peperomia Watermelon</h3>
-            <h5>PRECIO: $1750</h5>
+            <h5 class="precio">PRECIO: $1750</h5>
             <p>Planta interior/ Amante de la luz,no sol directo/ Le gustan los ambientes humedos</p>
-            <button id="buttonadd" onclick="onclickDecirProductoAdd(this)" data-id ="6"> Agregar al carrito</button>
+            <button class="u-full-width button-primary button input agregar-carrito"  data-id ="6"> Agregar al carrito</button>
           
           </div>
         </div>
@@ -149,9 +161,9 @@
           <img src="Plantas interior/potuslemon.jpg" alt="..."id="plantimage">
           <div class="caption">
             <h3>Potus Lemon</h3>
-            <h5>PRECIO: $890</h5>
+            <h5 class="precio">PRECIO: $890</h5>
             <p>Interior/ Exotica/Amiga de la sombra </p>
-            <button id="buttonadd" onclick="onclickDecirProductoAdd(this)"data-id ="7">Agregar al carrito</button>
+            <button class="u-full-width button-primary button input agregar-carrito" data-id ="7">Agregar al carrito</button>
           
           </div>
         </div>
@@ -161,9 +173,9 @@
           <img src="Plantas interior/Zamioculca.jpg" alt="..."id="plantimage">
           <div class="caption">
             <h3>Zamioculca</h3>
-            <h5>PRECIO: $5000</h5>
+            <h5 class="precio">PRECIO: $5000</h5>
             <p>Interior/ Planta del dinero en la cultura asiatica/ Amante de la luz, NO sol directo</p>
-            <button id="buttonadd" onclick="onclickDecirProductoAdd(this)"data-id ="8"> Agregar al carrito</button>
+            <button class="u-full-width button-primary button input agregar-carrito" data-id ="8"> Agregar al carrito</button>
           
           </div>
         </div>
@@ -174,15 +186,15 @@
     <section>
       <h1><strong>Plantas Exterior</strong></h1>
       <hr>
-      <div class="contenedor1">
+      <div class="contenedor1" id="listaproductos">
         <div class="card-carrito">
           <div class="thumbnail">
             <img src="Plexterior/jazminleche.jpg" alt="..."id="plantimage">
             <div class="caption">
               <h3>Jazmin Chino</h3>
-              <h5>PRECIO: $3500</h5>
+              <h5 class="precio">PRECIO: $3500</h5>
               <p>Ideal para decorar entradas</p>
-              <button id="buttonadd" onclick="onclickDecirProductoAdd(this)"data-id ="9"> Agregar al carrito</button>
+              <button class="u-full-width button-primary button input agregar-carrito" data-id ="9"> Agregar al carrito</button>
             
             </div>
           </div>
@@ -192,9 +204,9 @@
             <img src="Plexterior/ojopoeta.jpg" alt="..."id="plantimage">
             <div class="caption">
               <h3>Ojo de poeta</h3>
-              <h5>PRECIO: $3800</h5>
+              <h5 class="precio">PRECIO: $3800</h5>
               <p>Exterior/ Exotica/Amiga del sol </p>
-              <button id="buttonadd" onclick="onclickDecirProductoAdd(this)" data-id="10"> Agregar al carrito</button>
+              <button class="u-full-width button-primary button input agregar-carrito"  data-id="10"> Agregar al carrito</button>
             
             </div>
           </div>
@@ -204,9 +216,9 @@
             <img src="Plexterior/ravelana.jpg" alt="..."id="plantimage">
             <div class="caption">
               <h3>Ravelana</h3>
-              <h5>PRECIO: $2000</h5>
+              <h5 class="precio">PRECIO: $2000</h5>
               <p>Exterior</p>
-              <button id="buttonadd" onclick="onclickDecirProductoAdd(this)" data-id="11"> Agregar al carrito</button>
+              <button class="u-full-width button-primary button input agregar-carrito"  data-id="11"> Agregar al carrito</button>
             
             </div>
           </div>
@@ -214,15 +226,15 @@
       </div>
     </div>
 
-    <div class="contenedor1">
+    <div class="contenedor1" id="listaproductos">
       <div class="card-carrito">
         <div class="thumbnail">
           <img src="Plexterior/ficus.jpg" alt="..."id="plantimage">
           <div class="caption">
             <h3>Ficus arbustos</h3>
-            <h5>PRECIO: $5500</h5>
+            <h5 class="precio">PRECIO: $5500</h5>
             <p></p>
-            <button id="buttonadd" onclick="onclickDecirProductoAdd(this)" data-id="12"> Agregar al carrito</button>
+            <button class="u-full-width button-primary button input agregar-carrito"  data-id="12"> Agregar al carrito</button>
           
           </div>
         </div>
@@ -232,9 +244,9 @@
           <img src="Plexterior/begonialasdeangel.jpg" alt="..."id="plantimage">
           <div class="caption">
             <h3>Begonia de Angel</h3>
-            <h5>PRECIO: $1800</h5>
+            <h5 class="precio">PRECIO: $1800</h5>
             <p></p>
-            <button id="buttonadd" onclick="onclickDecirProductoAdd(this)" data-id="13"> Agregar al carrito</button>
+            <button class="u-full-width button-primary button input agregar-carrito"  data-id="13"> Agregar al carrito</button>
           
           </div>
         </div>
@@ -244,9 +256,9 @@
           <img src="Plexterior/hiedra.jpg" alt="..."id="plantimage">
           <div class="caption">
             <h3>Hiedra</h3>
-            <h5>PRECIO: $800</h5>
+            <h5 class="precio">PRECIO: $800</h5>
             <p>Interior/ Planta del dinero en la cultura asiatica/ Amante de la luz, NO sol directo</p>
-            <button id="buttonadd" onclick="onclickDecirProductoAdd(this)" data-id="14"> Agregar al carrito</button>
+            <button class="u-full-width button-primary button input agregar-carrito"  data-id="14"> Agregar al carrito</button>
           
           </div>
         </div>
@@ -321,6 +333,7 @@
      <script src="JsBravo.js"></script>
     </body>
 </html>
+
 
 
 
