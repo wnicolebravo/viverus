@@ -31,17 +31,134 @@ console.log (ProductoCatalogo)
 
 // Eventos con el DOM
 
-function onclickDecirProductoAdd(elemento){
-    let indiceElemento=elemento.dataset.id
-    let productoSeleccionado=ProductoCatalogo[indiceElemento]
-    
-    //alert(productoSeleccionado.toString())
-   // alert(JSON.stringify(productoSeleccionado))
-    
-    productoSeleccionado.precio
-    
-    console.log (productoSeleccionado)
+const carrito = document.getElementById ('carrito');
+const items = document.getElementById ('listaproductos');
+const listadeproductos = document.querySelector ('#lista-carrito tbody');
+const vaciarcarritoBtn = document.getElementById ('vaciar-carrito');
+
+cargarEventListeners();
+
+function cargarEventListeners (){
+ items.addEventListener('click', comprarProducto);
+ carrito.addEventListener('click', eliminarProducto);
+ vaciarcarritoBtn.addEventListener('click', vaciarCarrito)
+ document.addEventListener('DOMContentLoaded', leerLocalStorage);
+
 }
 
-const  boton =  document.getElementById ( "botoncompra" )
-    boton.innerHTML  =  `Abonar ${productoSeleccionado} `;roduc
+function comprarProducto (e){
+    e.preventDefault ();
+    if (e.target.classList.contains ('agregar-carrito')){
+        const item = e.target.parentElement.parentElement;
+        leerdatosProductos (item);
+    }
+}
+
+function leerdatosProductos(item){
+    const infoitem = {
+        imagen : item.querySelector ('img').src,
+        titulo : item.querySelector ('h3').textContent,
+        precio : item.querySelector('.precio').textContent,
+        id : item.querySelector('button').getAttribute('data-id')
+    }
+
+    insertarCarrito (infoitem);
+}
+
+function insertarCarrito (item){
+    const row = document.createELement ('tr');
+    row.innerHTML = `
+        <td>
+            <img src "${item.imagen}" width=100>
+        </td>
+        <td> ${item.titulo}</td>
+        <td> ${item.precio}</td>
+        <td>
+            <a href ="" class= "borrar-item" data-id = "${item.id}>x</a>
+        </td>
+    `;
+    listadeproductos.appendChild(row);
+    guardarProductosLocalStorage(item);
+}
+  
+
+function eliminarProducto(e) {
+    e.preventDefault();
+
+    let item,
+        itemId;
+    
+    if (e.target.classList.contains("borrar-producto")){
+        e.target.parentElement.parentElement.remove();
+        item = e.target.parentElement.parentElement;
+        itemId = platillo.querySelector('a').getAttribute('data-id');
+    }
+    eliminarProductosLocalStorage(itemId)
+}
+
+function vaciarCarrito(){
+    while(listadeproductos.firstChild){
+        listadeproductos.removeChild(listadeproductos.firstChild);
+    }
+    vaciarLocalStorage();
+
+    return false;
+}
+
+function guardarProductosLocalStorage(item) {
+    let Producter;
+
+    Producter= obtenerProductosLocalStorage();
+    Producter.push(item);
+
+    localStorage.setItem('Producter', JSON.stringify(Producter));
+}
+
+function obtenerProductosLocalStorage() {
+    let ProducterLS;
+
+    if(localStorage.getItem('Producter') === null) {
+        ProducterLS = [];
+    }else {
+        ProducterLS = JSON.parse(localStorage.getItem('Producter'));
+    }
+    return ProducterLS;
+}
+
+function leerLocalStorage() {
+    let ProducterLS;
+
+    ProducterLS = obtenerProductosLocalStorage();
+
+    ProducterLS.forEach(function(item){
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>
+                <img src="${item.imagen}" width=100>
+            </td>
+            <td>${item.titulo}</td>
+            <td>${item.precio}</td>
+            <td>
+                <a href="#" class="borrar-platillo" data-id="${item.id}">X</a>
+            </td>
+        `;
+        listadeproductos.appendChild(row);
+    });
+}
+
+function eliminarProductosLocalStorage(item) {
+    let ProducterLS;
+    ProducterLS = obtenerProductosLocalStorage();
+
+    ProducterLS.forEach(function(ProducterLS, index){
+        if(ProducterLS.id === item) {
+            ProducterLS.splice(index, 1);
+        }
+    });
+
+    localStorage.setItem('items', JSON.stringify(ProductersLS));
+}
+
+function vaciarLocalStorage() {
+    localStorage.clear();
+}
